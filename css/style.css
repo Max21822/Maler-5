@@ -24,6 +24,7 @@
   --color-bg-alt: #f5f4f1;
   --color-border: #dcdbd7;
   --color-paper: #f4f3ef;
+  --gradient-navy: linear-gradient(160deg, #1c3a68 0%, #16305a 55%, #0f2547 100%);
   /* Alle Schriften entweder system-/geräteeigen oder (Clark Script) lokal selbst gehostet. */
   --font-heading: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -41,6 +42,9 @@
   flex-shrink: 0;
 }
 .icon-sm { width: 16px; height: 16px; }
+
+.shield-svg-sm { filter: drop-shadow(0 1.5px 2px rgba(13,28,48,0.28)); }
+.shield-svg-lg { filter: drop-shadow(0 4px 8px rgba(13,28,48,0.3)); }
 
 .visually-hidden {
   position: absolute;
@@ -116,10 +120,11 @@ button:focus-visible {
 }
 .btn-lg { padding: 15px 34px; font-size: 1.05rem; }
 .btn-primary {
-  background: var(--color-primary);
+  background: var(--gradient-navy);
   color: #fff;
+  box-shadow: 0 4px 10px rgba(13,28,48,0.25);
 }
-.btn-primary:hover { background: var(--color-primary-dark); transform: translateY(-1px); }
+.btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
 .btn-outline {
   background: transparent;
   border-color: rgba(255,255,255,0.7);
@@ -282,7 +287,8 @@ button:focus-visible {
   width: 38px;
   height: 38px;
   border-radius: 8px;
-  background: var(--color-primary-dark);
+  background: var(--gradient-navy);
+  box-shadow: 0 2px 5px rgba(13,28,48,0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,7 +310,7 @@ button:focus-visible {
   width: 46%;
   height: 62%;
   z-index: 0;
-  background: var(--color-primary);
+  background: var(--gradient-navy);
   clip-path: polygon(
     52% 0%, 60% 5%, 55% 11%, 64% 15%, 59% 22%, 69% 25%, 64% 33%,
     74% 36%, 69% 44%, 80% 47%, 75% 55%, 86% 58%, 100% 63%,
@@ -399,7 +405,8 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-primary-dark);
+  background: var(--gradient-navy);
+  box-shadow: 0 3px 8px rgba(13,28,48,0.22);
   border-radius: 12px;
   margin: 0 auto 16px;
 }
@@ -433,11 +440,11 @@ button:focus-visible {
   height: 40px;
   margin: 0 auto 14px;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: var(--gradient-navy);
   color: #fff;
   font-weight: 700;
   font-family: var(--font-heading);
-  box-shadow: 0 0 0 6px var(--color-bg-alt);
+  box-shadow: 0 0 0 6px var(--color-bg-alt), 0 3px 6px rgba(13,28,48,0.2);
 }
 .step h3 { font-size: 0.98rem; margin-bottom: 6px; }
 .step p { font-size: 0.88rem; color: var(--color-text-light); }

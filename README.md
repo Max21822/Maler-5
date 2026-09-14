@@ -114,6 +114,14 @@ bzw. lassen Sie insbesondere Folgendes prüfen, bevor Sie live gehen:
   Abschnittsüberschrift, eine goldene Akzentlinie (Hero-Karte, Footer), eine
   verbindende Linie zwischen den Ablauf-Schritten sowie eine zweispaltige
   „Über uns"-Sektion mit dem Schild als ruhigem Blickfang.
+- Für mehr Tiefe/Wertigkeit: Das Schild-Logo hat jetzt einen dezenten
+  Farbverlauf, einen weichen Schlagschatten und einen sanften Glanzlicht-
+  Schimmer oben links (statt einer flachen Fläche) – so an allen Stellen,
+  an denen es erscheint (Header, Hero, „Über uns", Impressum,
+  Datenschutzerklärung). Alle navyfarbenen Icon-Kacheln (Leistungen,
+  Ablauf-Nummern, Hero-Leistungsliste) sowie die Haupt-Buttons nutzen
+  denselben Farbverlauf und einen leichten Schatten, damit das gesamte
+  Erscheinungsbild aus einem Guss wirkt.
 - Technische Umsetzung: semantisches HTML (`header`/`nav`/`main`/`footer`),
   Skip-Link für Tastaturnutzung, sichtbare Fokus-Zustände,
   `prefers-reduced-motion`-Unterstützung, responsive für Smartphones/Tablets,

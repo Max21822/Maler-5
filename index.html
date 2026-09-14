@@ -11,7 +11,19 @@
 <body>
 
 <!-- Icon-Sprite: einheitliches, selbst gezeichnetes Icon-Set (keine externe Icon-Bibliothek) -->
-<svg style="display:none" aria-hidden="true">
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c3a68"/>
+      <stop offset="55%" stop-color="#16305a"/>
+      <stop offset="100%" stop-color="#0f2547"/>
+    </linearGradient>
+    <radialGradient id="shieldSheen" cx="35%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
   <symbol id="icon-brush" viewBox="0 0 24 24">
     <path d="M7 2 H17 L15 9 H9 Z"/>
     <rect x="9" y="9" width="6" height="3"/>
@@ -63,26 +75,27 @@
   <div class="container header-inner">
     <a href="#top" class="logo">
       <span class="logo-shield" aria-hidden="true">
-        <svg viewBox="0 0 64 72" width="46" height="52">
-          <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="#16305a"/>
+        <svg class="shield-svg-sm" viewBox="0 0 64 72" width="46" height="52">
+          <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="url(#shieldGrad)"/>
+          <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="url(#shieldSheen)"/>
           <path d="M32 6 L56 15 V34 C56 49.5 46 60 32 65.5 C18 60 8 49.5 8 34 V15 Z" fill="none" stroke="#e7ecf2" stroke-width="1.3"/>
           <g>
             <rect x="9" y="15.5" width="15" height="6" rx="3" fill="#f4f6f8" transform="rotate(-25 16.5 18.5)"/>
             <path d="M17.5 22.5 L22.5 23.5 L23.8 43 C23.8 46.5 22 48.7 20.8 49.3 C19.6 48.7 17.9 46.5 17.9 43 Z" fill="#f4f6f8"/>
-            <circle cx="20.8" cy="46" r="1.5" fill="#16305a"/>
+            <circle cx="20.8" cy="46" r="1.5" fill="#132b52"/>
           </g>
           <g>
             <path d="M25 24 L25 12 L28 12 L28 16 L30 16 L30 9 L34 9 L34 16 L36 16 L36 12 L39 12 L39 24 Z" fill="#f4f6f8"/>
             <rect x="26.5" y="24" width="11" height="5" fill="#f4f6f8"/>
-            <line x1="26.5" y1="25.7" x2="37.5" y2="25.7" stroke="#16305a" stroke-width="0.7"/>
-            <line x1="26.5" y1="27.3" x2="37.5" y2="27.3" stroke="#16305a" stroke-width="0.7"/>
+            <line x1="26.5" y1="25.7" x2="37.5" y2="25.7" stroke="#132b52" stroke-width="0.7"/>
+            <line x1="26.5" y1="27.3" x2="37.5" y2="27.3" stroke="#132b52" stroke-width="0.7"/>
             <path d="M27 29 L37 29 L35 44 C35 47.5 33.2 49.7 32 50.3 C30.8 49.7 29 47.5 29 44 Z" fill="#f4f6f8"/>
-            <circle cx="32" cy="47" r="1.6" fill="#16305a"/>
+            <circle cx="32" cy="47" r="1.6" fill="#132b52"/>
           </g>
           <g>
             <path d="M37 15.5 L48.5 20 L45 26.5 L34.5 22 Z" fill="#f4f6f8"/>
             <path d="M39.5 24 L45.5 26.3 L44.7 44 C44.5 47.3 42.7 49.5 41.5 50.1 C40.4 49.4 38.9 47.1 39.2 43.8 Z" fill="#f4f6f8"/>
-            <circle cx="42" cy="46.8" r="1.5" fill="#16305a"/>
+            <circle cx="42" cy="46.8" r="1.5" fill="#132b52"/>
           </g>
         </svg>
       </span>
@@ -116,26 +129,27 @@
 
       <div class="biz-card-brand">
         <div class="biz-card-shield" aria-hidden="true">
-          <svg viewBox="0 0 64 72" width="118" height="133">
-            <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="#16305a"/>
+          <svg class="shield-svg-lg" viewBox="0 0 64 72" width="118" height="133">
+            <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="url(#shieldGrad)"/>
+            <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="url(#shieldSheen)"/>
             <path d="M32 6 L56 15 V34 C56 49.5 46 60 32 65.5 C18 60 8 49.5 8 34 V15 Z" fill="none" stroke="#e7ecf2" stroke-width="1.3"/>
             <g>
               <rect x="9" y="15.5" width="15" height="6" rx="3" fill="#f4f6f8" transform="rotate(-25 16.5 18.5)"/>
               <path d="M17.5 22.5 L22.5 23.5 L23.8 43 C23.8 46.5 22 48.7 20.8 49.3 C19.6 48.7 17.9 46.5 17.9 43 Z" fill="#f4f6f8"/>
-              <circle cx="20.8" cy="46" r="1.5" fill="#16305a"/>
+              <circle cx="20.8" cy="46" r="1.5" fill="#132b52"/>
             </g>
             <g>
               <path d="M25 24 L25 12 L28 12 L28 16 L30 16 L30 9 L34 9 L34 16 L36 16 L36 12 L39 12 L39 24 Z" fill="#f4f6f8"/>
               <rect x="26.5" y="24" width="11" height="5" fill="#f4f6f8"/>
-              <line x1="26.5" y1="25.7" x2="37.5" y2="25.7" stroke="#16305a" stroke-width="0.7"/>
-              <line x1="26.5" y1="27.3" x2="37.5" y2="27.3" stroke="#16305a" stroke-width="0.7"/>
+              <line x1="26.5" y1="25.7" x2="37.5" y2="25.7" stroke="#132b52" stroke-width="0.7"/>
+              <line x1="26.5" y1="27.3" x2="37.5" y2="27.3" stroke="#132b52" stroke-width="0.7"/>
               <path d="M27 29 L37 29 L35 44 C35 47.5 33.2 49.7 32 50.3 C30.8 49.7 29 47.5 29 44 Z" fill="#f4f6f8"/>
-              <circle cx="32" cy="47" r="1.6" fill="#16305a"/>
+              <circle cx="32" cy="47" r="1.6" fill="#132b52"/>
             </g>
             <g>
               <path d="M37 15.5 L48.5 20 L45 26.5 L34.5 22 Z" fill="#f4f6f8"/>
               <path d="M39.5 24 L45.5 26.3 L44.7 44 C44.5 47.3 42.7 49.5 41.5 50.1 C40.4 49.4 38.9 47.1 39.2 43.8 Z" fill="#f4f6f8"/>
-              <circle cx="42" cy="46.8" r="1.5" fill="#16305a"/>
+              <circle cx="42" cy="46.8" r="1.5" fill="#132b52"/>
             </g>
           </svg>
         </div>
@@ -235,26 +249,27 @@
 <section class="section" id="ueber-uns">
   <div class="container about-grid">
     <div class="about-media" aria-hidden="true">
-      <svg viewBox="0 0 64 72" width="150" height="169">
-        <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="#16305a"/>
+      <svg class="shield-svg-lg" viewBox="0 0 64 72" width="150" height="169">
+        <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="url(#shieldGrad)"/>
+        <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="url(#shieldSheen)"/>
         <path d="M32 6 L56 15 V34 C56 49.5 46 60 32 65.5 C18 60 8 49.5 8 34 V15 Z" fill="none" stroke="#e7ecf2" stroke-width="1.3"/>
         <g>
           <rect x="9" y="15.5" width="15" height="6" rx="3" fill="#f4f6f8" transform="rotate(-25 16.5 18.5)"/>
           <path d="M17.5 22.5 L22.5 23.5 L23.8 43 C23.8 46.5 22 48.7 20.8 49.3 C19.6 48.7 17.9 46.5 17.9 43 Z" fill="#f4f6f8"/>
-          <circle cx="20.8" cy="46" r="1.5" fill="#16305a"/>
+          <circle cx="20.8" cy="46" r="1.5" fill="#132b52"/>
         </g>
         <g>
           <path d="M25 24 L25 12 L28 12 L28 16 L30 16 L30 9 L34 9 L34 16 L36 16 L36 12 L39 12 L39 24 Z" fill="#f4f6f8"/>
           <rect x="26.5" y="24" width="11" height="5" fill="#f4f6f8"/>
-          <line x1="26.5" y1="25.7" x2="37.5" y2="25.7" stroke="#16305a" stroke-width="0.7"/>
-          <line x1="26.5" y1="27.3" x2="37.5" y2="27.3" stroke="#16305a" stroke-width="0.7"/>
+          <line x1="26.5" y1="25.7" x2="37.5" y2="25.7" stroke="#132b52" stroke-width="0.7"/>
+          <line x1="26.5" y1="27.3" x2="37.5" y2="27.3" stroke="#132b52" stroke-width="0.7"/>
           <path d="M27 29 L37 29 L35 44 C35 47.5 33.2 49.7 32 50.3 C30.8 49.7 29 47.5 29 44 Z" fill="#f4f6f8"/>
-          <circle cx="32" cy="47" r="1.6" fill="#16305a"/>
+          <circle cx="32" cy="47" r="1.6" fill="#132b52"/>
         </g>
         <g>
           <path d="M37 15.5 L48.5 20 L45 26.5 L34.5 22 Z" fill="#f4f6f8"/>
           <path d="M39.5 24 L45.5 26.3 L44.7 44 C44.5 47.3 42.7 49.5 41.5 50.1 C40.4 49.4 38.9 47.1 39.2 43.8 Z" fill="#f4f6f8"/>
-          <circle cx="42" cy="46.8" r="1.5" fill="#16305a"/>
+          <circle cx="42" cy="46.8" r="1.5" fill="#132b52"/>
         </g>
       </svg>
     </div>
