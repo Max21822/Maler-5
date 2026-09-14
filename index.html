@@ -3,41 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clark Malermeister – Ihr Malerbetrieb für Innen & Außen</title>
-<meta name="description" content="Clark Malermeister – Malerarbeiten, Bodenbelags-, Fassaden- und Tapezierarbeiten, Spachteltechniken und Sanierungen. Jetzt kostenloses Angebot anfordern.">
+<title>Clark Malermeister</title>
+<meta name="description" content="Clark Malermeister – Malerarbeiten, Bodenbelags-, Fassaden- und Tapezierarbeiten, Spachteltechniken und Sanierungen.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!-- Top bar -->
-<div class="topbar">
-  <div class="container topbar-inner">
-    <div class="topbar-item"><span aria-hidden="true">📍</span> Musterstraße 12, 12345 Musterstadt</div>
-    <div class="topbar-item"><span aria-hidden="true">🕐</span> Mo–Fr: 07:00–17:00 Uhr</div>
-    <a class="topbar-item topbar-phone" href="tel:+4901773649265"><span aria-hidden="true">📞</span> 0177 / 364 92 65</a>
-  </div>
-</div>
 
 <!-- Header -->
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a href="#top" class="logo">
       <span class="logo-shield" aria-hidden="true">
-        <svg viewBox="0 0 64 72" width="42" height="47">
+        <svg viewBox="0 0 64 72" width="46" height="52">
           <path d="M32 2 L60 12 V34 C60 52 48 64 32 70 C16 64 4 52 4 34 V12 Z" fill="#16305a"/>
-          <path d="M32 6 L56 15 V34 C56 49.5 46 60 32 65.5 C18 60 8 49.5 8 34 V15 Z" fill="none" stroke="#e7ecf2" stroke-width="1.5"/>
-          <g stroke="#f4f6f8" stroke-width="3.2" stroke-linecap="round" fill="none">
-            <path d="M20 20 L26 46"/>
-            <path d="M32 16 L32 48"/>
-            <path d="M44 20 L38 46"/>
-          </g>
-          <rect x="16" y="14" width="8" height="9" rx="1.5" fill="#f4f6f8"/>
-          <rect x="27" y="11" width="10" height="10" rx="1.5" fill="#f4f6f8"/>
-          <rect x="40" y="14" width="7" height="8" rx="1.5" fill="#f4f6f8"/>
+          <path d="M32 6 L56 15 V34 C56 49.5 46 60 32 65.5 C18 60 8 49.5 8 34 V15 Z" fill="none" stroke="#e7ecf2" stroke-width="1.3"/>
+          <!-- Farbrolle links -->
+          <line x1="19" y1="46" x2="24" y2="21" stroke="#f4f6f8" stroke-width="3" stroke-linecap="round"/>
+          <rect x="15" y="15" width="9" height="9" rx="2" fill="#f4f6f8" transform="rotate(-12 19.5 19.5)"/>
+          <!-- großer Pinsel mitte -->
+          <line x1="32" y1="48" x2="32" y2="22" stroke="#f4f6f8" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M25 22 L26 10 L29 16 L32 8 L35 16 L38 10 L39 22 Z" fill="#f4f6f8"/>
+          <!-- Spachtel rechts -->
+          <line x1="45" y1="46" x2="40" y2="23" stroke="#f4f6f8" stroke-width="3" stroke-linecap="round"/>
+          <path d="M36 14 L45 17 L42 24 L34 20 Z" fill="#f4f6f8"/>
         </svg>
       </span>
       <span class="logo-text">
@@ -48,11 +40,9 @@
     <nav class="nav" id="nav">
       <a href="#leistungen">Leistungen</a>
       <a href="#ueber-uns">Über uns</a>
-      <a href="#referenzen">Referenzen</a>
-      <a href="#kundenstimmen">Kundenstimmen</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <a href="#kontakt" class="btn btn-primary header-cta">Angebot anfordern</a>
+    <a href="tel:+4901773649265" class="btn btn-primary header-cta">0177 / 364 92 65</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -61,75 +51,41 @@
 
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-bg" aria-hidden="true"></div>
   <div class="container hero-inner">
-    <p class="eyebrow">Malermeisterbetrieb</p>
-    <h1>Präzision und Qualität<br>aus Meisterhand</h1>
-    <p class="hero-sub">
-      Clark Malermeister steht für saubere Ausführung, ehrliche Beratung und
-      handwerkliche Perfektion – von der Fassade bis zum letzten Feinschliff.
-    </p>
-    <div class="hero-actions">
-      <a href="#kontakt" class="btn btn-primary btn-lg">Kostenloses Angebot anfordern</a>
-      <a href="#leistungen" class="btn btn-ghost btn-lg">Unsere Leistungen</a>
-    </div>
-    <ul class="hero-badges">
-      <li>✔ Meisterbetrieb</li>
-      <li>✔ Festpreis-Garantie</li>
-      <li>✔ Kostenlose Beratung vor Ort</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Stats -->
-<section class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><span class="stat-num" data-count="15">0</span><span class="stat-suffix">+</span><p>Jahre Erfahrung</p></div>
-    <div class="stat"><span class="stat-num" data-count="620">0</span><span class="stat-suffix">+</span><p>abgeschlossene Projekte</p></div>
-    <div class="stat"><span class="stat-num" data-count="98">0</span><span class="stat-suffix">%</span><p>Kundenzufriedenheit</p></div>
-    <div class="stat"><span class="stat-num" data-count="12">0</span><span class="stat-suffix"></span><p>Fachkräfte im Team</p></div>
+    <h1>Malerarbeiten aus Meisterhand</h1>
+    <p class="hero-sub">Clark Malermeister – saubere Ausführung, faire Preise, termingerecht.</p>
+    <a href="tel:+4901773649265" class="btn btn-primary btn-lg">📞 0177 / 364 92 65</a>
   </div>
 </section>
 
 <!-- Leistungen -->
 <section class="section" id="leistungen">
   <div class="container">
-    <p class="eyebrow center">Unsere Leistungen</p>
-    <h2 class="section-title center">Alles aus einer Hand</h2>
-    <p class="section-sub center">
-      Von der ersten Beratung bis zum letzten Pinselstrich – wir begleiten Ihr Projekt
-      zuverlässig und termingerecht.
-    </p>
+    <h2 class="section-title center">Leistungen</h2>
     <div class="cards">
       <article class="card">
         <div class="card-icon">🖌️</div>
         <h3>Malerarbeiten</h3>
-        <p>Wände, Decken und Holzarbeiten in Ihrer Wunschfarbe – sauber, staubarm und termingerecht ausgeführt.</p>
       </article>
       <article class="card">
         <div class="card-icon">📐</div>
         <h3>Bodenbelagsarbeiten</h3>
-        <p>Fachgerechte Verlegung und Beschichtung von Bodenbelägen für Wohn- und Gewerberäume.</p>
       </article>
       <article class="card">
         <div class="card-icon">🏠</div>
         <h3>Fassadenarbeiten</h3>
-        <p>Witterungsbeständige Beschichtungen, die Ihr Gebäude schützen und optisch aufwerten.</p>
       </article>
       <article class="card">
         <div class="card-icon">🧻</div>
         <h3>Tapezierarbeiten</h3>
-        <p>Von klassischer Raufaser bis zu edlen Designtapeten – exakt verarbeitet, ohne sichtbare Nähte.</p>
       </article>
       <article class="card">
         <div class="card-icon">🪃</div>
         <h3>Spachteltechniken</h3>
-        <p>Individuelle Wandgestaltung mit hochwertigen Spachteltechniken für ein edles Raumgefühl.</p>
       </article>
       <article class="card">
         <div class="card-icon">✨</div>
         <h3>Sanierungen</h3>
-        <p>Komplettsanierungen inklusive Putz-, Spachtel- und Malerarbeiten aus einer Hand.</p>
       </article>
     </div>
   </div>
@@ -137,189 +93,39 @@
 
 <!-- Über uns -->
 <section class="section section-alt" id="ueber-uns">
-  <div class="container about-grid">
-    <div class="about-media" aria-hidden="true">
-      <div class="about-media-shape"></div>
-      <div class="about-media-emoji">🛡️</div>
-    </div>
-    <div class="about-content">
-      <p class="eyebrow">Über uns</p>
-      <h2 class="section-title">Handwerk mit Tradition, Qualität mit Zukunft</h2>
-      <p>
-        Clark Malermeister ist ein inhabergeführter Betrieb mit Sitz in Musterstadt.
-        Seit über 15 Jahren stehen wir für saubere Ausführung, ehrliche Beratung und faire Preise.
-        Unser eingespieltes Team aus Malermeistern und Gesellen sorgt dafür, dass jedes Projekt –
-        ob kleines Zimmer oder komplette Fassade – termingerecht und in Top-Qualität abgeschlossen wird.
-      </p>
-      <ul class="check-list">
-        <li>Kostenlose und unverbindliche Vor-Ort-Beratung</li>
-        <li>Transparente Festpreise ohne versteckte Kosten</li>
-        <li>Hochwertige, umweltschonende Materialien</li>
-        <li>Saubere Arbeitsweise mit Abdeckung &amp; Staubschutz</li>
-        <li>Gewährleistung auf alle ausgeführten Arbeiten</li>
-      </ul>
-      <a href="#kontakt" class="btn btn-primary">Jetzt Kontakt aufnehmen</a>
-    </div>
-  </div>
-</section>
-
-<!-- Referenzen -->
-<section class="section" id="referenzen">
   <div class="container">
-    <p class="eyebrow center">Referenzen</p>
-    <h2 class="section-title center">Ausgewählte Projekte</h2>
-    <p class="section-sub center">Ein kleiner Einblick in unsere abgeschlossenen Arbeiten.</p>
-    <div class="gallery">
-      <figure class="gallery-item g1"><figcaption>Fassadensanierung – Einfamilienhaus</figcaption></figure>
-      <figure class="gallery-item g2"><figcaption>Wohnzimmer &amp; Flur – Malerarbeiten</figcaption></figure>
-      <figure class="gallery-item g3"><figcaption>Treppenhaus – Mehrfamilienhaus</figcaption></figure>
-      <figure class="gallery-item g4"><figcaption>Büroräume – Bodenbelag</figcaption></figure>
-      <figure class="gallery-item g5"><figcaption>Kinderzimmer – Tapezierarbeiten</figcaption></figure>
-      <figure class="gallery-item g6"><figcaption>Wohnzimmerwand – Spachteltechnik</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- Kundenstimmen -->
-<section class="section section-alt" id="kundenstimmen">
-  <div class="container">
-    <p class="eyebrow center">Kundenstimmen</p>
-    <h2 class="section-title center">Was unsere Kunden sagen</h2>
-    <div class="testimonials">
-      <blockquote class="testimonial">
-        <p>„Sehr pünktlich, sauber gearbeitet und das Ergebnis ist top. Unsere Fassade sieht aus wie neu!“</p>
-        <cite>– Familie Bergmann, Musterstadt</cite>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>„Freundliche Beratung, fairer Preis und alles wurde genau wie besprochen umgesetzt. Absolute Empfehlung.“</p>
-        <cite>– S. Nowak, Musterstadt</cite>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>„Unser Büro wurde innerhalb weniger Tage komplett saniert – professionell und ohne Betriebsunterbrechung.“</p>
-        <cite>– M. Keller, Keller GmbH</cite>
-      </blockquote>
-    </div>
+    <h2 class="section-title center">Über uns</h2>
+    <p class="about-text">
+      Clark Malermeister ist ein inhabergeführter Betrieb mit Sitz in Musterstadt.
+      Seit über 15 Jahren stehen wir für saubere Ausführung, ehrliche Beratung und
+      faire Preise – vom kleinen Zimmer bis zur kompletten Fassade.
+    </p>
   </div>
 </section>
 
 <!-- Kontakt -->
 <section class="section" id="kontakt">
-  <div class="container contact-grid">
-    <div class="contact-info">
-      <p class="eyebrow">Kontakt</p>
-      <h2 class="section-title">Lassen Sie uns über Ihr Projekt sprechen</h2>
-      <p>Rufen Sie uns an oder senden Sie uns eine Nachricht – wir melden uns in der Regel innerhalb eines Werktages.</p>
-      <ul class="contact-details">
-        <li><span aria-hidden="true">📍</span> Musterstraße 12, 12345 Musterstadt</li>
-        <li><span aria-hidden="true">📞</span> <a href="tel:+4901773649265">0177 / 364 92 65</a></li>
-        <li><span aria-hidden="true">✉️</span> <a href="mailto:info@clark-malermeister.de">info@clark-malermeister.de</a></li>
-        <li><span aria-hidden="true">🕐</span> Mo–Fr: 07:00–17:00 Uhr</li>
-      </ul>
-      <div class="contact-social">
-        <a href="#" aria-label="Facebook">Facebook</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-      </div>
-    </div>
-    <form class="contact-form" id="contactForm" novalidate>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">E-Mail *</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="phone">Telefon</label>
-          <input type="tel" id="phone" name="phone">
-        </div>
-        <div class="form-group">
-          <label for="service">Gewünschte Leistung</label>
-          <select id="service" name="service">
-            <option value="">Bitte wählen</option>
-            <option>Malerarbeiten</option>
-            <option>Bodenbelagsarbeiten</option>
-            <option>Fassadenarbeiten</option>
-            <option>Tapezierarbeiten</option>
-            <option>Spachteltechniken</option>
-            <option>Sanierungen</option>
-            <option>Sonstiges</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="message">Ihre Nachricht *</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-lg form-submit">Nachricht senden</button>
-      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</section>
-
-<!-- CTA Band -->
-<section class="cta-band">
-  <div class="container cta-band-inner">
-    <h2>Bereit für Ihr nächstes Projekt?</h2>
-    <p>Fordern Sie jetzt Ihr kostenloses und unverbindliches Angebot an.</p>
-    <a href="#kontakt" class="btn btn-light btn-lg">Jetzt Angebot anfordern</a>
+  <div class="container">
+    <h2 class="section-title center">Kontakt</h2>
+    <ul class="contact-details center">
+      <li><span aria-hidden="true">📍</span> Musterstraße 12, 12345 Musterstadt</li>
+      <li><span aria-hidden="true">📞</span> <a href="tel:+4901773649265">0177 / 364 92 65</a></li>
+      <li><span aria-hidden="true">✉️</span> <a href="mailto:info@clark-malermeister.de">info@clark-malermeister.de</a></li>
+      <li><span aria-hidden="true">🕐</span> Mo–Fr: 07:00–17:00 Uhr</li>
+    </ul>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <a href="#top" class="logo footer-logo">
-        <span class="logo-text">
-          <span class="logo-script">Clark</span>
-          <span class="logo-sub">— Malermeister —</span>
-        </span>
-      </a>
-      <p>Ihr Malermeisterbetrieb für Innen- und Außenarbeiten in Musterstadt und Umgebung.</p>
-    </div>
-    <div>
-      <h4>Leistungen</h4>
-      <ul>
-        <li><a href="#leistungen">Malerarbeiten</a></li>
-        <li><a href="#leistungen">Bodenbelagsarbeiten</a></li>
-        <li><a href="#leistungen">Fassadenarbeiten</a></li>
-        <li><a href="#leistungen">Tapezierarbeiten</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Unternehmen</h4>
-      <ul>
-        <li><a href="#ueber-uns">Über uns</a></li>
-        <li><a href="#referenzen">Referenzen</a></li>
-        <li><a href="#kundenstimmen">Kundenstimmen</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Kontakt</h4>
-      <ul>
-        <li>Musterstraße 12, 12345 Musterstadt</li>
-        <li><a href="tel:+4901773649265">0177 / 364 92 65</a></li>
-        <li><a href="mailto:info@clark-malermeister.de">info@clark-malermeister.de</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <p>&copy; <span id="year"></span> Clark Malermeister. Alle Rechte vorbehalten.</p>
-      <div class="footer-legal">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-      </div>
-    </div>
+  <div class="container footer-inner">
+    <span class="logo-text">
+      <span class="logo-script">Clark</span>
+      <span class="logo-sub">— Malermeister —</span>
+    </span>
+    <p>&copy; <span id="year"></span> Clark Malermeister</p>
   </div>
 </footer>
-
-<a href="#top" class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">↑</a>
 
 <script src="js/script.js"></script>
 </body>

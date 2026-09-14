@@ -1,18 +1,16 @@
 # Clark Malermeister – Website
 
-Moderne, responsive Website für den Malermeisterbetrieb **Clark**, gestaltet
-im Design der Firmen-Visitenkarte (marineblaues Schild-Logo, Schreibschrift
-„Clark“, Leistungsübersicht, Kontaktdaten). Reines HTML/CSS/JS-Projekt ohne
-Build-Prozess.
+Schlichte, pragmatische One-Page-Website für den Malermeisterbetrieb
+**Clark**, gestaltet im Design der Firmen-Visitenkarte (marineblaues
+Schild-Logo mit Rolle/Pinsel/Spachtel, Schreibschrift „Clark“). Reines
+HTML/CSS/JS-Projekt ohne Build-Prozess.
 
 ## Inhalt
 
-- `index.html` – Startseite (Hero, Leistungen, Über uns, Referenzen,
-  Kundenstimmen, Kontaktformular)
-- `css/style.css` – Styling im Marineblau/Gold-Farbschema der Visitenkarte,
-  responsive für Desktop/Tablet/Mobile
-- `js/script.js` – mobiles Menü, animierte Statistik-Zähler,
-  Kontaktformular-Validierung
+- `index.html` – Startseite (Header, Hero, Leistungen, Über uns, Kontakt)
+- `css/style.css` – schlankes Styling im Marineblau/Gold-Farbschema der
+  Visitenkarte, responsive für Desktop/Tablet/Mobile
+- `js/script.js` – mobiles Menü
 
 ## Leistungen (laut Visitenkarte)
 
@@ -35,7 +33,7 @@ Danach im Browser `http://localhost:8080` öffnen.
 
 - Telefonnummer (0177 364 92 65) stammt von der Visitenkarte. Adresse und
   E-Mail sind Platzhalter und sollten vor dem echten Einsatz ersetzt werden.
-- Das Kontaktformular ist aktuell nur clientseitig validiert (Demo) und noch
-  nicht an ein Backend / einen E-Mail-Versand angebunden.
+- Bewusst kein Kontaktformular und keine „Angebot anfordern“-CTAs – Kontakt
+  läuft direkt über Telefon/E-Mail.
 - Für ein kostenloses Hosting eignet sich z. B. **GitHub Pages**
   (Repository-Einstellungen → Pages → Branch auswählen).
