@@ -38,6 +38,7 @@
     </a>
     <nav class="nav" id="nav" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
+      <a href="#ablauf">Ablauf</a>
       <a href="#ueber-uns">Über uns</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -54,8 +55,14 @@
 <section class="hero">
   <div class="container">
     <h1>Clark Malermeister</h1>
-    <p class="hero-sub">Malerarbeiten, Bodenbeläge, Fassaden, Tapezierarbeiten, Spachteltechniken und Sanierungen.</p>
-    <a href="tel:+4901773649265" class="btn btn-primary btn-lg">📞 0177 / 364 92 65</a>
+    <p class="hero-sub">
+      Malerarbeiten, Bodenbeläge, Fassaden, Tapezierarbeiten, Spachteltechniken
+      und Sanierungen – aus einer Hand.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:+4901773649265" class="btn btn-primary btn-lg">📞 0177 / 364 92 65</a>
+      <a href="#leistungen" class="btn btn-outline btn-lg">Leistungen ansehen</a>
+    </div>
   </div>
 </section>
 
@@ -67,33 +74,68 @@
       <article class="card">
         <div class="card-icon" aria-hidden="true">🖌️</div>
         <h3>Malerarbeiten</h3>
+        <p>Wände, Decken und Holzarbeiten im Innen- und Außenbereich.</p>
       </article>
       <article class="card">
         <div class="card-icon" aria-hidden="true">📐</div>
         <h3>Bodenbelagsarbeiten</h3>
+        <p>Verlegung und Beschichtung von Bodenbelägen für Wohn- und Gewerberäume.</p>
       </article>
       <article class="card">
         <div class="card-icon" aria-hidden="true">🏠</div>
         <h3>Fassadenarbeiten</h3>
+        <p>Beschichtung und Instandsetzung von Fassaden.</p>
       </article>
       <article class="card">
         <div class="card-icon" aria-hidden="true">🧻</div>
         <h3>Tapezierarbeiten</h3>
+        <p>Von Raufaser bis Designtapete – fachgerecht verarbeitet.</p>
       </article>
       <article class="card">
         <div class="card-icon" aria-hidden="true">🪃</div>
         <h3>Spachteltechniken</h3>
+        <p>Individuelle Wandgestaltung mit Spachteltechniken.</p>
       </article>
       <article class="card">
         <div class="card-icon" aria-hidden="true">✨</div>
         <h3>Sanierungen</h3>
+        <p>Putz-, Spachtel- und Malerarbeiten im Rahmen von Sanierungen.</p>
       </article>
     </div>
   </div>
 </section>
 
+<!-- Ablauf -->
+<section class="section section-alt" id="ablauf">
+  <div class="container">
+    <h2 class="section-title center">So läuft ein Auftrag ab</h2>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <h3>Kontaktaufnahme</h3>
+        <p>Sie schildern uns telefonisch oder per E-Mail, was gemacht werden soll.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <h3>Vor-Ort-Termin</h3>
+        <p>Wir sehen uns das Projekt gemeinsam mit Ihnen an und besprechen Details.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <h3>Angebot</h3>
+        <p>Sie erhalten ein Angebot mit Leistungsumfang und Kosten.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">4</span>
+        <h3>Ausführung</h3>
+        <p>Nach Ihrer Freigabe führen wir die Arbeiten zum vereinbarten Termin aus.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
 <!-- Über uns -->
-<section class="section section-alt" id="ueber-uns">
+<section class="section" id="ueber-uns">
   <div class="container">
     <h2 class="section-title center">Über uns</h2>
     <p class="placeholder-note">
@@ -101,13 +143,20 @@
     </p>
     <p class="about-text">
       Clark Malermeister führt Maler-, Boden-, Fassaden- und Tapezierarbeiten sowie
-      Spachteltechniken und Sanierungen aus.
+      Spachteltechniken und Sanierungen aus. Vor Ort besprechen wir mit Ihnen den
+      Leistungsumfang und den zeitlichen Ablauf, bevor die Arbeiten beginnen.
     </p>
+    <ul class="principles">
+      <li>Beratung vor Ort vor Angebotserstellung</li>
+      <li>Schriftliches Angebot vor Auftragsbeginn</li>
+      <li>Abdeckung und Staubschutz während der Arbeiten</li>
+      <li>Ansprechpartner während der gesamten Auftragsdauer</li>
+    </ul>
   </div>
 </section>
 
 <!-- Kontakt -->
-<section class="section" id="kontakt">
+<section class="section section-alt" id="kontakt">
   <div class="container">
     <h2 class="section-title center">Kontakt</h2>
     <p class="placeholder-note">
@@ -127,18 +176,40 @@
 
 <!-- Footer -->
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <span class="footer-brand">
+  <div class="container footer-grid">
+    <div class="footer-col">
       <span class="logo-text">
         <span class="logo-script">Clark</span>
         <span class="logo-sub">— Malermeister —</span>
       </span>
-    </span>
-    <p>&copy; <span id="year"></span> Clark Malermeister</p>
-    <nav class="footer-legal" aria-label="Rechtliches">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutzerklärung</a>
-    </nav>
+      <p class="footer-tagline">Malerarbeiten, Böden, Fassaden, Tapeten, Spachteltechniken, Sanierungen.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Leistungen</h4>
+      <ul>
+        <li><a href="#leistungen">Malerarbeiten</a></li>
+        <li><a href="#leistungen">Bodenbelagsarbeiten</a></li>
+        <li><a href="#leistungen">Fassadenarbeiten</a></li>
+        <li><a href="#leistungen">Tapezierarbeiten</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li>Musterstraße 12, 12345 Musterstadt</li>
+        <li><a href="tel:+4901773649265">0177 / 364 92 65</a></li>
+        <li><a href="mailto:info@clark-malermeister.de">info@clark-malermeister.de</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; <span id="year"></span> Clark Malermeister</p>
+      <nav class="footer-legal" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+      </nav>
+    </div>
   </div>
 </footer>
 

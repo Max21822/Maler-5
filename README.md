@@ -7,7 +7,7 @@ Tracking und ohne externe Schriftarten.
 
 ## Seiten
 
-- `index.html` – Startseite (Header, Hero, Leistungen, Über uns, Kontakt)
+- `index.html` – Startseite (Header, Hero, Leistungen, Ablauf, Über uns, Kontakt)
 - `impressum.html` – Impressum (eigenständige Seite, nur über Footer verlinkt)
 - `datenschutz.html` – Datenschutzerklärung (eigenständige Seite, nur über Footer verlinkt)
 - `css/style.css` – gesamtes Styling (System-Schriftarten, responsive)
@@ -81,8 +81,13 @@ bzw. lassen Sie insbesondere Folgendes prüfen, bevor Sie live gehen:
 5. **Aussagen über Ihren Betrieb prüfen** – der Abschnitt „Über uns" enthält
    aktuell nur einen sachlichen Platzhaltertext ohne unbestätigte
    Behauptungen (z. B. keine Angaben zu Firmenalter, Teamgröße oder
-   Kundenzufriedenheit). Ergänzen Sie dort nur Aussagen, die Sie tatsächlich
-   bestätigen können.
+   Kundenzufriedenheit). Bewusst **nicht** enthalten sind eine
+   Referenzen-/Projektgalerie, Kundenstimmen sowie Kennzahlen (z. B.
+   „X Jahre Erfahrung", „X abgeschlossene Projekte", Zufriedenheitswerte) –
+   solche Angaben würden unbestätigte bzw. nicht überprüfbare Behauptungen
+   über Ihren Betrieb darstellen und sollten nur ergänzt werden, wenn Sie
+   sie tatsächlich belegen können. Der Abschnitt „So läuft ein Auftrag ab"
+   beschreibt einen allgemeinen Ablauf, keine betriebsspezifische Aussage.
 6. **Hinweis:** Diese Website und ihre Dokumente behaupten an keiner Stelle,
    „rechtssicher" oder „DSGVO-konform" zu sein – das kann nur nach Prüfung
    Ihrer tatsächlichen, individuellen Situation (u. a. durch Ihr Hosting,
