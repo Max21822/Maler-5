@@ -6,12 +6,11 @@
 <title>Clark Malermeister</title>
 <meta name="description" content="Clark Malermeister – Malerarbeiten, Bodenbelags-, Fassaden- und Tapezierarbeiten, Spachteltechniken und Sanierungen.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
 
 <!-- Header -->
 <header class="site-header" id="top">
@@ -37,23 +36,25 @@
         <span class="logo-sub">— Malermeister —</span>
       </span>
     </a>
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
       <a href="#ueber-uns">Über uns</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
     <a href="tel:+4901773649265" class="btn btn-primary header-cta">0177 / 364 92 65</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
+<main id="main">
+
 <!-- Hero -->
 <section class="hero">
-  <div class="container hero-inner">
-    <h1>Malerarbeiten aus Meisterhand</h1>
-    <p class="hero-sub">Clark Malermeister – saubere Ausführung, faire Preise, termingerecht.</p>
+  <div class="container">
+    <h1>Clark Malermeister</h1>
+    <p class="hero-sub">Malerarbeiten, Bodenbeläge, Fassaden, Tapezierarbeiten, Spachteltechniken und Sanierungen.</p>
     <a href="tel:+4901773649265" class="btn btn-primary btn-lg">📞 0177 / 364 92 65</a>
   </div>
 </section>
@@ -64,27 +65,27 @@
     <h2 class="section-title center">Leistungen</h2>
     <div class="cards">
       <article class="card">
-        <div class="card-icon">🖌️</div>
+        <div class="card-icon" aria-hidden="true">🖌️</div>
         <h3>Malerarbeiten</h3>
       </article>
       <article class="card">
-        <div class="card-icon">📐</div>
+        <div class="card-icon" aria-hidden="true">📐</div>
         <h3>Bodenbelagsarbeiten</h3>
       </article>
       <article class="card">
-        <div class="card-icon">🏠</div>
+        <div class="card-icon" aria-hidden="true">🏠</div>
         <h3>Fassadenarbeiten</h3>
       </article>
       <article class="card">
-        <div class="card-icon">🧻</div>
+        <div class="card-icon" aria-hidden="true">🧻</div>
         <h3>Tapezierarbeiten</h3>
       </article>
       <article class="card">
-        <div class="card-icon">🪃</div>
+        <div class="card-icon" aria-hidden="true">🪃</div>
         <h3>Spachteltechniken</h3>
       </article>
       <article class="card">
-        <div class="card-icon">✨</div>
+        <div class="card-icon" aria-hidden="true">✨</div>
         <h3>Sanierungen</h3>
       </article>
     </div>
@@ -95,10 +96,12 @@
 <section class="section section-alt" id="ueber-uns">
   <div class="container">
     <h2 class="section-title center">Über uns</h2>
+    <p class="placeholder-note">
+      Platzhaltertext – bitte durch eigene, geprüfte Angaben zu Ihrem Betrieb ersetzen.
+    </p>
     <p class="about-text">
-      Clark Malermeister ist ein inhabergeführter Betrieb mit Sitz in Musterstadt.
-      Seit über 15 Jahren stehen wir für saubere Ausführung, ehrliche Beratung und
-      faire Preise – vom kleinen Zimmer bis zur kompletten Fassade.
+      Clark Malermeister führt Maler-, Boden-, Fassaden- und Tapezierarbeiten sowie
+      Spachteltechniken und Sanierungen aus.
     </p>
   </div>
 </section>
@@ -107,7 +110,11 @@
 <section class="section" id="kontakt">
   <div class="container">
     <h2 class="section-title center">Kontakt</h2>
-    <ul class="contact-details center">
+    <p class="placeholder-note">
+      Adresse und E-Mail sind Platzhalter – bitte vor Veröffentlichung durch die
+      tatsächlichen Daten ersetzen.
+    </p>
+    <ul class="contact-details">
       <li><span aria-hidden="true">📍</span> Musterstraße 12, 12345 Musterstadt</li>
       <li><span aria-hidden="true">📞</span> <a href="tel:+4901773649265">0177 / 364 92 65</a></li>
       <li><span aria-hidden="true">✉️</span> <a href="mailto:info@clark-malermeister.de">info@clark-malermeister.de</a></li>
@@ -116,14 +123,22 @@
   </div>
 </section>
 
+</main>
+
 <!-- Footer -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span class="logo-text">
-      <span class="logo-script">Clark</span>
-      <span class="logo-sub">— Malermeister —</span>
+    <span class="footer-brand">
+      <span class="logo-text">
+        <span class="logo-script">Clark</span>
+        <span class="logo-sub">— Malermeister —</span>
+      </span>
     </span>
     <p>&copy; <span id="year"></span> Clark Malermeister</p>
+    <nav class="footer-legal" aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+    </nav>
   </div>
 </footer>
 
