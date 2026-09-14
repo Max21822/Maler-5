@@ -29,7 +29,7 @@ Vollständige Liste – Stand dieser Version:
 
 | Kategorie | Verwendet? | Details |
 |---|---|---|
-| Externe Schriftarten (z. B. Google Fonts) | **Nein** | Es werden ausschließlich system-/geräteeigene Schriftarten genutzt (`system-ui`, `Segoe UI`, `Roboto`, `Helvetica`, `Arial`, `Georgia`, `Times New Roman`). Kein `<link>` zu externen Font-Anbietern. |
+| Externe Schriftarten (z. B. Google Fonts) | **Nein – aber eine selbst gehostete Schreibschrift** | Für den Schriftzug „Clark" im Logo wird die Schreibschrift **Alex Brush** verwendet, um das Logo der Visitenkarte möglichst genau nachzubilden. Die Schriftdatei liegt lokal im Projekt (`fonts/AlexBrush-Regular.woff2`) und wird **nicht** von Google oder einem anderen Fremdanbieter zur Laufzeit geladen – kein externer Request. Lizenz: SIL Open Font License 1.1 (erlaubt Selbst-Hosting/Weitergabe der Schriftdatei). Alle übrigen Texte nutzen system-/geräteeigene Schriftarten (`system-ui`, `Segoe UI`, `Roboto`, `Helvetica`, `Arial`, `Georgia`, `Times New Roman`). **Bitte prüfen:** Diese Schrift wurde von mir automatisch als optische Annäherung an die Schrift auf Ihrer Visitenkarte ausgewählt – falls Sie die exakte Originalschrift kennen oder eine andere bevorzugen, sollte die Datei ausgetauscht werden. |
 | Tracking / Analyse (Google Analytics, Matomo o. Ä.) | **Nein** | Nicht eingebunden. |
 | Marketing-/Social-Pixel (Meta Pixel etc.) | **Nein** | Nicht eingebunden. |
 | Google Maps / Kartendienste | **Nein** | Nicht eingebunden. |
@@ -98,6 +98,13 @@ bzw. lassen Sie insbesondere Folgendes prüfen, bevor Sie live gehen:
 
 - Telefonnummer (0177 364 92 65) stammt von der Visitenkarte. Adresse und
   E-Mail auf der Startseite sind Platzhalter.
+- Das Schild-Logo (Rolle, Pinsel, Spachtel) sowie der Hero-Bereich
+  ("digitale Visitenkarte" mit Leistungsliste und Wasserfarben-Ecke) wurden
+  als eigenes, neu gezeichnetes Inline-SVG möglichst nah an Ihrer
+  Visitenkarte nachgebaut. Da mir nur das Bild der Karte vorlag (keine
+  Vektor-/Originaldatei), ist es eine sorgfältige Annäherung, keine
+  Pixel-für-Pixel-Kopie. Wenn Sie die Original-Logodatei (SVG/AI/PDF)
+  haben, kann diese anstelle des nachgebauten SVGs eingebunden werden.
 - Technische Umsetzung: semantisches HTML (`header`/`nav`/`main`/`footer`),
   Skip-Link für Tastaturnutzung, sichtbare Fokus-Zustände,
   `prefers-reduced-motion`-Unterstützung, responsive für Smartphones/Tablets,

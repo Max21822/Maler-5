@@ -1,6 +1,19 @@
 /* ============ Reset & Base ============ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/*
+ * Schreibschrift für das Logo ("Clark"), lokal selbst gehostet (Datei liegt
+ * in fonts/) – kein Laden von einem externen Font-Anbieter zur Laufzeit.
+ * Alex Brush von TypeSETit, SIL Open Font License (Selbst-Hosting erlaubt).
+ */
+@font-face {
+  font-family: "Clark Script";
+  src: url("../fonts/AlexBrush-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-primary: #1b3358;
   --color-primary-dark: #0d1c30;
@@ -10,12 +23,25 @@
   --color-text-light: #55626c;
   --color-bg-alt: #f5f4f1;
   --color-border: #dcdbd7;
-  /* Bewusst keine externen Web-Fonts: nur system- bzw. geräteeigene Schriften. */
+  --color-paper: #f4f3ef;
+  /* Alle Schriften entweder system-/geräteeigen oder (Clark Script) lokal selbst gehostet. */
   --font-heading: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-script: Georgia, "Times New Roman", serif;
+  --font-script: "Clark Script", Georgia, "Times New Roman", serif;
   --radius: 12px;
   --shadow: 0 8px 24px rgba(13, 28, 48, 0.1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 html { scroll-behavior: smooth; }
@@ -90,6 +116,12 @@ button:focus-visible {
   color: #fff;
 }
 .btn-outline:hover { background: rgba(255,255,255,0.12); transform: translateY(-1px); }
+.btn-outline-dark {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.btn-outline-dark:hover { background: var(--color-primary); color: #fff; transform: translateY(-1px); }
 
 /* ============ Header ============ */
 .site-header {
@@ -166,31 +198,125 @@ button:focus-visible {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ============ Hero ============ */
+/* ============ Hero / Visitenkarten-Nachbildung ============ */
 .hero {
-  background: var(--color-primary);
-  color: #fff;
-  padding: 90px 0;
+  background: var(--color-paper);
+  padding: 48px 0 44px;
   text-align: center;
 }
-.hero h1 {
-  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
-  color: #fff;
-  margin-bottom: 14px;
+
+.biz-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #f6f5f1;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 44px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
 }
-.hero-sub {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 30px;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 701px) {
+  .biz-card { aspect-ratio: 3 / 2; }
 }
+
+.biz-card-brand { text-align: center; position: relative; z-index: 1; }
+.biz-card-shield { display: flex; justify-content: center; margin-bottom: 10px; }
+.biz-card-script {
+  font-family: var(--font-script);
+  font-size: clamp(3.2rem, 9vw, 4.6rem);
+  line-height: 0.9;
+  color: #14151a;
+}
+.biz-card-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+.biz-card-sub .rule { width: 22px; height: 1.5px; background: var(--color-primary); display: inline-block; }
+.biz-card-phone {
+  margin-top: 10px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+.biz-card-phone a { color: inherit; }
+
+.biz-card-services {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.biz-card-services li { display: flex; align-items: center; gap: 12px; }
+.service-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  background: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+.biz-card-services li span:last-child {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--color-dark);
+}
+
+.biz-card-splash {
+  position: absolute;
+  right: -3%;
+  bottom: -4%;
+  width: 46%;
+  height: 62%;
+  z-index: 0;
+  background: var(--color-primary);
+  clip-path: polygon(
+    52% 0%, 60% 5%, 55% 11%, 64% 15%, 59% 22%, 69% 25%, 64% 33%,
+    74% 36%, 69% 44%, 80% 47%, 75% 55%, 86% 58%, 100% 63%,
+    100% 100%, 20% 100%, 25% 91%, 18% 87%, 24% 78%, 16% 74%,
+    22% 65%, 14% 61%, 20% 51%
+  );
+}
+.biz-card-splash-glow {
+  position: absolute;
+  right: -8%;
+  bottom: -10%;
+  width: 42%;
+  height: 55%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(27,51,88,0.2), transparent 70%);
+  filter: blur(8px);
+  z-index: 0;
+}
+
 .hero-actions {
   display: flex;
   gap: 14px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 28px;
 }
 
 /* ============ Sections ============ */
@@ -382,6 +508,27 @@ button:focus-visible {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+@media (max-width: 700px) {
+  .biz-card {
+    grid-template-columns: 1fr;
+    padding: 32px 22px 90px;
+    text-align: center;
+  }
+  .biz-card-services {
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .biz-card-services li { max-width: 260px; }
+  .biz-card-splash {
+    width: 46%;
+    height: 22%;
+    right: -4%;
+    bottom: -3%;
+  }
+  .biz-card-splash-glow { width: 40%; height: 20%; }
+}
+
 @media (max-width: 760px) {
   .nav {
     position: absolute;
@@ -402,7 +549,7 @@ button:focus-visible {
   .nav-toggle { display: flex; }
   .cards { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
-  .hero { padding: 60px 0; }
+  .hero { padding: 36px 0; }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-grid { grid-template-columns: 1fr; padding: 36px 24px 24px; text-align: center; }
   .footer-tagline { margin-left: auto; margin-right: auto; }
