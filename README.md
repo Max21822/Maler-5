@@ -36,7 +36,7 @@ Vollständige Liste – Stand dieser Version:
 | YouTube / Video-Einbettungen | **Nein** | Nicht eingebunden. |
 | JavaScript-Bibliotheken / Frameworks | **Nein** | Nur eigenes, minimales Vanilla-JS (`js/script.js`) für das mobile Menü und die Jahreszahl im Footer. |
 | CSS-Frameworks | **Nein** | Eigenes CSS ohne Framework. |
-| Bilder | **Keine Rasterbilder/Fotos** | Es werden keine Fotos verwendet. Das Logo ist selbst erstelltes Inline-SVG (im HTML eingebettet, keine externe Datei). Als Icons dienen Unicode-Emoji (systemeigene Emoji-Darstellung des Betriebssystems/Browsers, kein Bilddownload). |
+| Bilder | **Keine Rasterbilder/Fotos** | Es werden keine Fotos verwendet. Logo, Wasserfarben-Ecke und das komplette Icon-Set (Leistungen, Kontakt) sind selbst gezeichnetes Inline-SVG (im HTML eingebettet, keine externe Datei, keine Icon-Bibliothek). |
 | Favicon | Ja, selbst erstellt | Inline-SVG als Data-URI (`<link rel="icon" href="data:image/svg+xml,...">`), kein externer Request. |
 | Kontaktformular | **Nein** | Bewusst nicht umgesetzt, siehe unten. Kontakt läuft über `tel:`- und `mailto:`-Links, die das jeweilige Programm auf dem Gerät des Besuchers öffnen. |
 | Cookies | **Keine** | Es werden von dieser Website selbst keine Cookies gesetzt. |
@@ -105,6 +105,15 @@ bzw. lassen Sie insbesondere Folgendes prüfen, bevor Sie live gehen:
   Vektor-/Originaldatei), ist es eine sorgfältige Annäherung, keine
   Pixel-für-Pixel-Kopie. Wenn Sie die Original-Logodatei (SVG/AI/PDF)
   haben, kann diese anstelle des nachgebauten SVGs eingebunden werden.
+- Für ein durchgängigeres, hochwertigeres Erscheinungsbild wurden die
+  ursprünglich genutzten Emoji-Icons durch ein einheitliches, selbst
+  gezeichnetes Icon-Set ersetzt (Pinsel, Boden, Fassade, Tapete, Spachtel,
+  Sanierung, Standort, Telefon, E-Mail, Uhr, Haken) – definiert einmal als
+  SVG-Sprite am Seitenanfang von `index.html` und per `<use>` überall
+  eingebunden. Zusätzlich: kleine „Eyebrow"-Kicker über jeder
+  Abschnittsüberschrift, eine goldene Akzentlinie (Hero-Karte, Footer), eine
+  verbindende Linie zwischen den Ablauf-Schritten sowie eine zweispaltige
+  „Über uns"-Sektion mit dem Schild als ruhigem Blickfang.
 - Technische Umsetzung: semantisches HTML (`header`/`nav`/`main`/`footer`),
   Skip-Link für Tastaturnutzung, sichtbare Fokus-Zustände,
   `prefers-reduced-motion`-Unterstützung, responsive für Smartphones/Tablets,

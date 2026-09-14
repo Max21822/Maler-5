@@ -29,8 +29,18 @@
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-script: "Clark Script", Georgia, "Times New Roman", serif;
   --radius: 12px;
-  --shadow: 0 8px 24px rgba(13, 28, 48, 0.1);
+  --radius-lg: 20px;
+  --shadow: 0 1px 2px rgba(13,28,48,0.06), 0 10px 28px rgba(13, 28, 48, 0.1);
+  --shadow-lg: 0 2px 4px rgba(13,28,48,0.06), 0 24px 48px rgba(13, 28, 48, 0.14);
 }
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+.icon-sm { width: 16px; height: 16px; }
 
 .visually-hidden {
   position: absolute;
@@ -59,7 +69,7 @@ body {
 }
 
 a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
+ul, ol { list-style: none; }
 h1, h2, h3 { font-family: var(--font-heading); color: var(--color-dark); line-height: 1.25; }
 
 a:focus-visible,
@@ -200,8 +210,10 @@ button:focus-visible {
 
 /* ============ Hero / Visitenkarten-Nachbildung ============ */
 .hero {
-  background: var(--color-paper);
-  padding: 48px 0 44px;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(27,51,88,0.06), transparent 70%),
+    var(--color-paper);
+  padding: 56px 0 48px;
   text-align: center;
 }
 
@@ -211,8 +223,9 @@ button:focus-visible {
   isolation: isolate;
   background: #f6f5f1;
   border: 1px solid var(--color-border);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
+  border-top: 3px solid var(--color-highlight);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
   padding: 44px 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -268,13 +281,13 @@ button:focus-visible {
   flex-shrink: 0;
   width: 38px;
   height: 38px;
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--color-primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
 }
+.service-icon .icon { width: 19px; height: 19px; color: #f4f6f8; }
 .biz-card-services li span:last-child {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -320,10 +333,33 @@ button:focus-visible {
 }
 
 /* ============ Sections ============ */
-.section { padding: 64px 0; }
+.section { padding: 76px 0; }
 .section-alt { background: var(--color-bg-alt); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--color-highlight);
+  margin-bottom: 10px;
+}
+.eyebrow.center { display: flex; justify-content: center; }
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 16px;
+  height: 1.5px;
+  background: var(--color-highlight);
+  opacity: 0.6;
+}
+
 .section-title {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   margin-bottom: 32px;
 }
 .section-title.center { text-align: center; }
@@ -336,22 +372,28 @@ button:focus-visible {
   margin: 0 auto 20px;
   text-align: center;
 }
+.placeholder-note-left { text-align: left; margin: 0 0 18px; }
 
 /* ============ Cards / Leistungen ============ */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
 .card {
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 26px 20px;
+  padding: 30px 24px;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: transparent;
 }
 .card-icon {
-  font-size: 1.8rem;
   width: 52px;
   height: 52px;
   display: flex;
@@ -359,72 +401,117 @@ button:focus-visible {
   justify-content: center;
   background: var(--color-primary-dark);
   border-radius: 12px;
-  margin: 0 auto 14px;
+  margin: 0 auto 16px;
 }
+.card-icon .icon { width: 24px; height: 24px; color: #f4f6f8; }
 .card h3 { font-size: 1rem; margin-bottom: 6px; }
 .card p { font-size: 0.9rem; color: var(--color-text-light); }
 
 /* ============ Ablauf ============ */
 .steps {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  counter-reset: step;
 }
-.step { text-align: center; }
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1.5px;
+  background: var(--color-border);
+  z-index: 0;
+}
+.step { position: relative; z-index: 1; text-align: center; }
 .step-num {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  margin: 0 auto 12px;
+  margin: 0 auto 14px;
   border-radius: 50%;
   background: var(--color-primary);
   color: #fff;
   font-weight: 700;
   font-family: var(--font-heading);
+  box-shadow: 0 0 0 6px var(--color-bg-alt);
 }
 .step h3 { font-size: 0.98rem; margin-bottom: 6px; }
 .step p { font-size: 0.88rem; color: var(--color-text-light); }
 
 /* ============ About ============ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.about-media {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+.about-content .section-title,
+.about-content .eyebrow { text-align: left; }
 .about-text {
   max-width: 640px;
   margin: 0 auto 24px;
   text-align: center;
   color: var(--color-text-light);
 }
+.about-text-left { margin: 0 0 24px; text-align: left; color: var(--color-text-light); }
 .principles {
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 460px;
 }
 .principles li {
-  position: relative;
-  padding-left: 26px;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
   color: var(--color-text);
 }
-.principles li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--color-primary);
-  font-weight: 700;
+.principles li .icon {
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 50%;
+  padding: 3px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 /* ============ Contact ============ */
 .contact-details {
-  max-width: 420px;
+  max-width: 440px;
   margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 8px 24px;
+  box-shadow: var(--shadow);
 }
 .contact-details li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 14px;
+  padding: 14px 0;
   font-weight: 500;
 }
+.contact-details li:not(:last-child) { border-bottom: 1px solid var(--color-border); }
+.contact-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-icon .icon { width: 16px; height: 16px; color: var(--color-primary); }
 
 /* ============ Legal pages (Impressum / Datenschutz) ============ */
 .legal-notice {
@@ -457,7 +544,7 @@ button:focus-visible {
 }
 
 /* ============ Footer ============ */
-.site-footer { background: var(--color-dark); color: #b6bfc9; }
+.site-footer { background: var(--color-dark); color: #b6bfc9; border-top: 3px solid var(--color-highlight); }
 .footer-inner {
   display: flex;
   justify-content: space-between;
@@ -549,8 +636,18 @@ button:focus-visible {
   .nav-toggle { display: flex; }
   .cards { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
+  .steps::before { display: none; }
   .hero { padding: 36px 0; }
+  .section { padding: 56px 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+  .about-media { padding-top: 0; }
+  .about-content .section-title,
+  .about-content .eyebrow { text-align: center; justify-content: center; }
+  .about-text-left, .placeholder-note-left { text-align: center; }
+  .principles { margin: 0 auto; }
+  .principles li { justify-content: center; }
   .footer-inner { flex-direction: column; text-align: center; }
+  .footer-brand { flex-direction: column; }
   .footer-grid { grid-template-columns: 1fr; padding: 36px 24px 24px; text-align: center; }
   .footer-tagline { margin-left: auto; margin-right: auto; }
   .footer-bottom-inner { flex-direction: column; text-align: center; }
